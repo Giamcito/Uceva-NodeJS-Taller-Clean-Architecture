@@ -87,7 +87,7 @@ export class ReviewDatasource {
             productId: faker.number.int({ min: 1, max: 50 }),
             rating: faker.number.int({ min: 1, max: 5 }),
             comment: faker.helpers.arrayElement(this.reviewComments),
-            date: faker.date.past({ years: 1 }).toISOString().split('T')[0],
+            date: faker.date.past({ years: 1 }).toISOString().split('T')[0]!,
         });
     }
 
